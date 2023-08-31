@@ -36,7 +36,7 @@ async def show_directions(callback: types.CallbackQuery):
 
 @dp.callback_query_handler(text='baby')
 async def show_baby(callback: types.CallbackQuery):
-    photo = open('media/baby.jpeg', 'rb')
+    photo = open('media/baby.jpg', 'rb')
 
     await bot.send_message(callback.from_user.id, baby)
     await bot.send_photo(callback.message.chat.id, photo=photo, reply_markup=inline_finish_back)
